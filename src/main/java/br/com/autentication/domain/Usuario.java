@@ -20,9 +20,12 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "nome", length = 100)
-    private String nome;
+    @Column(name = "login", length = 100, unique = true)
+    private String login;
 
-    @Column(name = "sobre_nome", length = 100)
-    private String sobreNome;
+    @Column(name = "senha", length = 100)
+    private String senha;
+
+    @Column(name = "role", length = 10)
+    private String role;
 }

@@ -1,6 +1,5 @@
 package br.com.autentication.domain.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,7 +10,9 @@ import lombok.Setter;
 
 public class UsuarioDTO {
 
-    private String nome;
+    private String login;
 
-    private String sobreNome;
+    private String senha;
+
+    private String role;
 }

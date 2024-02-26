@@ -21,8 +21,9 @@ public class UsuarioServiceImpl implements UsuarioService {
     public Usuario criarUsuario(UsuarioDTO usuarioDTO) {
 
         Usuario usuarioNovo = Usuario.builder()
-                .nome(usuarioDTO.getNome())
-                .sobreNome(usuarioDTO.getSobreNome())
+                .login(usuarioDTO.getLogin())
+                .senha(usuarioDTO.getSenha())
+                .role(usuarioDTO.getRole())
                 .build();
 
         return usuarioRepository.save(usuarioNovo);
